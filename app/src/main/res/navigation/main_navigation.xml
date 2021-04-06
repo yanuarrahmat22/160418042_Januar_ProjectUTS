@@ -97,11 +97,6 @@
             android:id="@+id/action_peminjamanFasilitasFragment_to_fasilitasListFragment"
             app:destination="@id/fasilitasListFragment" />
     </fragment>
-    <activity
-        android:id="@+id/loginActivity"
-        android:name="com.example.a160418042_januar_projectuts.view.LoginActivity"
-        android:label="LOGIN"
-        tools:layout="@layout/activity_login" />
     <fragment
         android:id="@+id/journalListFragment"
         android:name="com.example.a160418042_januar_projectuts.view.JournalListFragment"

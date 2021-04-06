@@ -2,9 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/loginActivity"
-        android:title="LOGIN" />
+        android:id="@+id/itemProfil"
+        android:title="PROFILE" />
     <item
         android:id="@+id/journalListFragment"
         android:title="E-JOURNAL" />
+    <item
+        android:id="@+id/itemSetting"
+        android:title="SETTING" />
 </menu>
