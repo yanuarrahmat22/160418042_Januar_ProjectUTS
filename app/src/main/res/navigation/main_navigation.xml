@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/bookListFragment">
+
+    <fragment
+        android:id="@+id/bookListFragment"
+        android:name="com.example.a160418042_januar_projectuts.view.BookListFragment"
+        android:label="Katalog Buku"
+        tools:layout="@layout/fragment_book_list">
+        <action
+            android:id="@+id/toBookDetailFragment"
+            app:destination="@id/bookDetailFragment" />
+        <action
+            android:id="@+id/toBookFilterFragment"
+            app:destination="@id/bookFilterFragment" />
+        <argument
+            android:name="kategori"
+            app:argType="string"
+            android:defaultValue="All" />
+    </fragment>
+    <fragment
+        android:id="@+id/tugasAkhirListFragment"
+        android:name="com.example.a160418042_januar_projectuts.view.TugasAkhirListFragment"
+        android:label="Katalog Tugas Akhir"
+        tools:layout="@layout/fragment_tugas_akhir_list">
+        <action
+            android:id="@+id/toTugasAkhirDetailFragment"
+            app:destination="@id/tugasAkhirDetailFragment" />
+        <action
+            android:id="@+id/toTugasAkhirFilterFragment"
+            app:destination="@id/tugasAkhirFilterFragment" />
+        <argument
+            android:name="fakultasFilter"
+            app:argType="string"
+            android:defaultValue="All" />
+    </fragment>
+    <fragment
+        android:id="@+id/fasilitasListFragment"
+        android:name="com.example.a160418042_januar_projectuts.view.FasilitasListFragment"
+        android:label="Fasilitas"
+        tools:layout="@layout/fragment_fasilitas_list">
+        <action
+            android:id="@+id/action_fasilitasListFragment_to_peminjamanFasilitasFragment"
+            app:destination="@id/peminjamanFasilitasFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookDetailFragment"
+        android:name="com.example.a160418042_januar_projectuts.view.BookDetailFragment"
+        android:label="Book Detail"
+        tools:layout="@layout/fragment_book_detail">
+        <action
+            android:id="@+id/action_bookDetailFragment_to_bookListFragment"
+            app:destination="@id/bookListFragment" />
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/tugasAkhirFilterFragment"
+        android:name="com.example.a160418042_januar_projectuts.view.TugasAkhirFilterFragment"
+        android:label="Filter Tugas Akhir"
+        tools:layout="@layout/fragment_tugas_akhir_filter">
+        <action
+            android:id="@+id/filterToTugasAkhirListFragment"
+            app:destination="@id/tugasAkhirListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookFilterFragment"
+        android:name="com.example.a160418042_januar_projectuts.view.BookFilterFragment"
+        android:label="Book Filter"
+        tools:layout="@layout/fragment_book_filter">
+        <action
+            android:id="@+id/filterToBookListFragment"
+            app:destination="@id/bookListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tugasAkhirDetailFragment"
+        android:name="com.example.a160418042_januar_projectuts.view.TugasAkhirDetailFragment"
+        android:label="Detail Tugas Akhir"
+        tools:layout="@layout/fragment_tugas_akhir_detail">
+        <action
+            android:id="@+id/action_tugasAkhirDetailFragment_to_tugasAkhirListFragment"
+            app:destination="@id/tugasAkhirListFragment" />
+        <argument
+            android:name="TAid"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/peminjamanFasilitasFragment"
+        android:name="com.example.a160418042_januar_projectuts.view.PeminjamanFasilitasFragment"
+        android:label="fragment_peminjaman_fasilitas"
+        tools:layout="@layout/fragment_peminjaman_fasilitas" >
+        <action
+            android:id="@+id/action_peminjamanFasilitasFragment_to_fasilitasListFragment"
+            app:destination="@id/fasilitasListFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.example.a160418042_januar_projectuts.view.LoginActivity"
+        android:label="LOGIN"
+        tools:layout="@layout/activity_login" />
+    <fragment
+        android:id="@+id/journalListFragment"
+        android:name="com.example.a160418042_januar_projectuts.view.JournalListFragment"
+        android:label="Katalog Journal"
+        tools:layout="@layout/fragment_journal_list">
+        <action
+            android:id="@+id/toJournalDetailFragment"
+            app:destination="@id/journalDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/journalDetailFragment"
+        android:name="com.example.a160418042_januar_projectuts.view.JournalDetailFragment"
+        android:label="Detail Journal"
+        tools:layout="@layout/fragment_journal_detail">
+        <action
+            android:id="@+id/action_journalDetailFragment_to_journalListFragment"
+            app:destination="@id/journalListFragment" />
+        <argument
+            android:name="journalid"
+            app:argType="string" />
+    </fragment>
+</navigation>
