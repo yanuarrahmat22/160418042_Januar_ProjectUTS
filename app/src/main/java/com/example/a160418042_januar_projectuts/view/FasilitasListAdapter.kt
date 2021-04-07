@@ -31,8 +31,8 @@ class FasilitasListAdapter  (val fasilitasList:ArrayList<Fasilitas>)
         var id:String = fasilitasList[position].id.toString()
         holder.view.txtNamaFasil.text = fasilitasList[position].nama
         holder.view.btnDetailFasil.setOnClickListener {
-//            val action = TugasAkhirListFragmentDirections.toTugasAkhirDetailFragment(id)
-//            Navigation.findNavController(it).navigate(action)
+            val action = FasilitasListFragmentDirections.toDetailFasilitasFragment(id)
+            Navigation.findNavController(it).navigate(action)
         }
     }
 

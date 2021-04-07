@@ -43,8 +43,11 @@
         android:label="Fasilitas"
         tools:layout="@layout/fragment_fasilitas_list">
         <action
-            android:id="@+id/action_fasilitasListFragment_to_peminjamanFasilitasFragment"
+            android:id="@+id/toPeminjamanFasilitasFragment"
             app:destination="@id/peminjamanFasilitasFragment" />
+        <action
+            android:id="@+id/toDetailFasilitasFragment"
+            app:destination="@id/detailFasilitasFragment" />
     </fragment>
     <fragment
         android:id="@+id/bookDetailFragment"
@@ -91,8 +94,8 @@
     <fragment
         android:id="@+id/peminjamanFasilitasFragment"
         android:name="com.example.a160418042_januar_projectuts.view.PeminjamanFasilitasFragment"
-        android:label="fragment_peminjaman_fasilitas"
-        tools:layout="@layout/fragment_peminjaman_fasilitas" >
+        android:label="Pinjam Ruangan"
+        tools:layout="@layout/fragment_peminjaman_fasilitas">
         <action
             android:id="@+id/action_peminjamanFasilitasFragment_to_fasilitasListFragment"
             app:destination="@id/fasilitasListFragment" />
@@ -118,4 +121,26 @@
             android:name="journalid"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/detailFasilitasFragment"
+        android:name="com.example.a160418042_januar_projectuts.view.DetailFasilitasFragment"
+        android:label="Detail Fasilitas"
+        tools:layout="@layout/fragment_detail_fasilitas">
+        <action
+            android:id="@+id/action_detailFasilitasFragment_to_fasilitasListFragment"
+            app:destination="@id/fasilitasListFragment" />
+        <argument
+            android:name="fasilitasID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.example.a160418042_januar_projectuts.view.ProfilFragment"
+        android:label="Profil User"
+        tools:layout="@layout/fragment_profil" />
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.a160418042_januar_projectuts.view.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" />
 </navigation>

@@ -2,12 +2,12 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/itemProfil"
+        android:id="@+id/profilFragment"
         android:title="PROFILE" />
     <item
         android:id="@+id/journalListFragment"
         android:title="E-JOURNAL" />
     <item
-        android:id="@+id/itemSetting"
+        android:id="@+id/settingFragment"
         android:title="SETTING" />
 </menu>

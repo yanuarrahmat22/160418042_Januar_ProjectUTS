@@ -48,6 +48,12 @@ class FasilitasListFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        fabPeminjaman.setOnClickListener()
+        {
+            val action = FasilitasListFragmentDirections.toPeminjamanFasilitasFragment()
+            Navigation.findNavController(it).navigate(action)
+        }
+
         viewModel = ViewModelProvider(this).get(FasilitasListViewModel::class.java)
         viewModel.refresh()
 
